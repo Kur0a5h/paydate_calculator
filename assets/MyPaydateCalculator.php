@@ -8,20 +8,20 @@ use DevXyz\Challenge\PaydateCalculatorInterface;
 
 class PaydateCalculator implements PaydateCalculatorInterface
 {
-    public $paydateOne;
-    public $numberOfPaydates;
-    public $paydateModel;
+    // public $paydateOne;
+    // public $numberOfPaydates;
+    // public $paydateModel;
     
     public $unit = null;
     public $count = null;
     public $paydates = array ();
       
-    public function __construct( $paydateOne, $numberOfPaydates, $paydateModel ) {
-        $this->$paydateOne = $paydateOne;
-        $this->$numberOfPaydates = $numberOfPaydates;
-        $this->$paydateModel = $paydateModel;
+    public function __construct( $paydateModel, $paydateOne, $numberOfPaydates  ) {
+        // $this->$paydateOne = $paydateOne;
+        // $this->$numberOfPaydates = $numberOfPaydates;
+        // $this->$paydateModel = $paydateModel;
         date_default_timezone_set('America/Los_Angeles');
-        echo ($paydateModel);
+        echo ($this->$paydateModel);
     }
     /**
      * takes a paydate model and first paydate and generates the next $numberOfPaydates paydates.
